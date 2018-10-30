@@ -19,3 +19,16 @@ L = []
 
 
 N = []
+
+#Crea un recorrido para buscar letras y numeros dentro de los datos
+for unalinea in datos:
+
+# Como los datos estan separados por comas 
+    guardavar = unalinea.split(sep=',') 
+    #Guarda los datos en el arreglo N, y la letras en el arreglo L
+
+    N.append(guardavar[2:])
+
+
+    L.append(guardavar[1])
+
