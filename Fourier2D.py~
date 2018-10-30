@@ -3,6 +3,3 @@
 ###IMPORTA LIBRERIAS NECESARIAS
 import numpy as np
 import matplotlib.pyplot as plt
-
-
-##cambio de prueba
