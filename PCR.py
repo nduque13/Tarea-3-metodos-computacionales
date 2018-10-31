@@ -121,6 +121,22 @@ Autovectores = Autovectores[:,np.argsort(Autovalores)]
 
 Autovalores = Autovalores[np.argsort(Autovalores)]
 
+###Gracias a la teoria sabemos que con los autovectores dados, se puede saber cuales son los componentes principales del analisis, en este caso habria que ver cuales son los ultimos dos autovectores que representarian los F1 y F2, por lo que los autovectores fueron organizados en orden ascendente, para saber cuales dos son los componentes principales!!! 
+
+##por ende busca los dos ultimos autovectores (mayores), que representarian los componentes principales del analisis
+
+C = Autovectores[:,[-1,-2]]
+
+print("Los componentes principales F1 y F2 del analisis serían:", C)
+
+
+###incizo de hallar la proyeccion de los datos en el sistema de coordenadas 
+
+
+
+
+
+
 
 
 
