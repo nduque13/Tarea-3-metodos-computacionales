@@ -79,14 +79,47 @@ def cova(A,B):
 matrix = np.zeros((Fil,Fil))
 #Crea dos recorridos como haciamos en el ejercicio de matrices para la tarea 2 que recorra filas y columnas
 for i in range(Fil):
+
     for j in range(Fil):
-        # i,j son recorridos en las variables (columnas)
 
-        ij = cova(N[:,i], N[:,j])
+        guardacovas = cova(N[:,i], N[:,j])
 
-        matrix[i,j] = ij
+        matrix[i,j] = guardacovas
+###Imprime el resultado propio d ela matriz de covarianza y el tesultaro teo
 
-print(matrix, '\n'*3, np.cov(N.T))
+print ("Mi resultado es:------------")
+print(matrix)
+print("El resultado por paquete de numpy es:---------------")
+print( np.cov(N.T))
+
+
+###El siguiente paso es calcular los auto vectores y los auto valores, para lo que crea dos variables llamadas Autovectores y Autovalores y utiliza el paquete eig de numpy para calcularlos.
+
+Autovalores,Autovectores = np.linalg.eig(matrix)}
+
+
+
+#Utiliza un recorrido para saber a que autovalor corresponde cada autovector 
+
+
+for k in range(Fil):
+    #Busca cada autovalor en las Filas y lo asocia a cada autovector presente
+
+
+
+    print( " El autovalor es: ", Autovalores[k])
+
+
+    print("y su correspondiente autovector es:", Autovectores[:,k])
+
+
+# Ordenar los autovalores y autovectores de acuerdo al orden menor-mayor de los autovalores
+
+
+Autovectores = Autovectores[:,np.argsort(Autovalores)]
+Autovalores = Autovalores[np.argsort(Autovalores)]
+
+
 
 
 
