@@ -113,10 +113,12 @@ for k in range(Fil):
     print("y su correspondiente autovector es:", Autovectores[:,k])
 
 
-# Ordenar los autovalores y autovectores de acuerdo al orden menor-mayor de los autovalores
+#Se ordenan los autovalores y los autovectoresssss con respecto al orden de menor a mayor de los autovalores
 
 
 Autovectores = Autovectores[:,np.argsort(Autovalores)]
+
+
 Autovalores = Autovalores[np.argsort(Autovalores)]
 
 
