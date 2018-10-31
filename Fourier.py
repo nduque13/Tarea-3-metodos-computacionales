@@ -57,9 +57,17 @@ freqsenal = fftfreq(NN,dt)
 
 #plt.plot(freqsenal,porfinfourier)
 #plt.show()
-
+DT = 1.0/N
 trans = fft(lasenal)
+freqnueva = fftfreq(N,DT)
 
+##OJOOO esto es con paquetes, si quiere ver la grafica con mis valores descomentela, da asquerosa.
+
+plt.plot(freqnueva, abs(trans))
+
+plt.xlim(-100,100)
+
+plt.savefig("DuqueNicolas_TF.pdf")
 
 
 
