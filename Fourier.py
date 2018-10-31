@@ -64,10 +64,32 @@ freqnueva = fftfreq(N,DT)
 ##OJOOO esto es con paquetes, si quiere ver la grafica con mis valores descomentela, da asquerosa.
 
 plt.plot(freqnueva, abs(trans))
+plt.xlabel("Frecuencia en Hz")
+plt.ylabel("Amplitud ")
 
 plt.xlim(-100,100)
 
 plt.savefig("DuqueNicolas_TF.pdf")
+plt.show()
+#####Imprima cuales son las frecuencias principales de la senal
+
+print("las frecuencias principales de la senal se pueden observar en la grafica DuqueNicolas_TF.pdf, las cuales son aproximadamente 4 Hz, 7Hz, y 11 Hz ")
+
+
+#Haga un filtro pasa bajos con frecuencia de corte fc = 1000Hz. realice la transformada
+#inversa y haga una grafica de la senal filtrada. Guarde dicha grafica sin mostrarla en
+#ApellidoNombre_filtrada.pdf
+
+longt = len(trans)
+for i in range(longt):
+	if(trans[i]>1000):
+		freqnueva = 0
+##Aca imprime mil cosas la misma grafica, si la frecuencia de corte es 1000 Hz no agarraria nuestros datos, dejo comentado el plot pero mire el for por favor COMENTO LAS GRAFICAS PARA QUE NO SE LE LLENE EL COMPUTADOR DE GRAFICAS
+#plt.plot(freqnueva,abs(trans))
+#plt.show() 
+
+
+
 
 
 
